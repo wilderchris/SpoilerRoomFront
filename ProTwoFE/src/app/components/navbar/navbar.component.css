@@ -1,0 +1,46 @@
+
+ul {
+    margin: 0 8%;/* 2nd number is able to adjust the x axis of navbar*/
+    padding: 0;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+}
+ul li {
+    position: relative;
+    list-style: none;
+}
+ul li a {
+    background: rgb(44, 21, 21);
+    color: rgb(243, 240, 240);
+    text-decoration: none;
+    font-size: 3em;
+    margin: 0 10px;
+    white-space: nowrap;
+    /* padding: 5px 20px; */
+    transition: 0.5s;
+}
+ul li a:hover {
+    background: rgb(180, 11, 11); /*on hover color for background and text changes */
+    color: #fff;
+}
+ul li img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-5%) translateY(-350px);/* -5 gives it a fde in from the right*/ 
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    transition: 0.5s;
+}
+ul li:hover img {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(-400px);
+}
+
+ul li:nth-child(even)  {
+    background: rgb(172, 170, 49);
+    color: rgb(228, 183, 183);
+    
+}

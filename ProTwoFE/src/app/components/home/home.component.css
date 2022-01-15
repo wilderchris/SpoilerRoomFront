@@ -1,0 +1,11 @@
+ body {
+    height: 650 px;  
+    background-image: url('https://protwo.s3.us-east-2.amazonaws.com/assets/curtain-PROTOTYPE2.png');  
+    background-size: 5%;  
+    background-size:contain;
+    background-repeat: no-repeat;
+ }
+ main {
+    text-align: center;
+    color:antiquewhite;
+ }

@@ -1,0 +1,55 @@
+<!-- <nav class="navbar">
+    <span>
+        <a routerLink="home">SpoilerRoom????</a>
+        <span>📼</span>
+        <a routerLink="register">Register</a>
+        <a *ngIf="loggedInUser" routerLink="mypets">My Pets</a>
+        <a *ngIf="loggedInUser && loggedInUser.role === 0 " routerLink="admin">Admin</a>
+    </span>
+    <span>
+        <button *ngIf="!loggedInUser; else user" (click)="showLogin=showLogin">Log In</button>
+        <ng-template #user>
+            {{ loggedInUser.firstName + ' ' + loggedInUser.lastName }}&nbsp;&nbsp;&nbsp;
+            <button (click)="logOut()">Log Out</button>
+        </ng-template>
+    </span>
+</nav>
+<ng-container *ngIf="showLogin">
+    <app-login (login)="setup()"></app-login>
+</ng-container> -->
+
+
+<body>
+<ul>
+    <li>
+        <a routerLink="home">SpoilerRoom</a>
+    <img src="https://protwo.s3.us-east-2.amazonaws.com/assets/popcornbucket.jpg">
+    </li>
+    <li>
+        <a routerLink="register">Register</a>
+    <img src="https://protwo.s3.us-east-2.amazonaws.com/assets/popcornbucket.jpg">
+    </li>
+    <li>
+        <a routerLink="login">Login</a>
+        <img src="https://protwo.s3.us-east-2.amazonaws.com/assets/popcornbucket.jpg">
+    </li>
+    <li>
+        <a *ngIf="loggedInUser" routerLink="register">Comment</a>
+        <img src="https://protwo.s3.us-east-2.amazonaws.com/assets/popcornbucket.jpg">
+    </li>
+    <li>
+        <a *ngIf="loggedInUser" routerLink="register">Write a Review</a>
+        <img src="https://protwo.s3.us-east-2.amazonaws.com/assets/popcornbucket.jpg">
+    </li>
+    <li>
+        <a *ngIf="loggedInUser" routerLink="logout">Logout</a>
+        <img src="https://protwo.s3.us-east-2.amazonaws.com/assets/popcornbucket.jpg">
+    </li>
+    <li>
+        <a *ngIf="loggedInUser" routerLink="update">Account</a>
+        <img src="https://protwo.s3.us-east-2.amazonaws.com/assets/popcornbucket.jpg">
+    </li>
+        </ul>
+    
+
+    </body>
