@@ -27,7 +27,7 @@ ul li a:hover {
 ul li img {
     position: absolute;
     left: 50%;
-    transform: translateX(-5%) translateY(-350px);/* -5 gives it a fde in from the right*/ 
+    transform: translateX(-15%) translateY(-200px);/* -5 gives it a fade in from the right*/ 
     visibility: hidden;
     opacity: 0;
     z-index: 1;
@@ -36,7 +36,7 @@ ul li img {
 ul li:hover img {
     visibility: visible;
     opacity: 1;
-    transform: translateX(-50%) translateY(-400px);
+    transform: translateX(-20%) translateY(-250px);
 }
 
 ul li:nth-child(even)  {

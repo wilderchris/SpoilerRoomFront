@@ -1,11 +1,35 @@
- body {
-    height: 650 px;  
-    background-image: url('https://protwo.s3.us-east-2.amazonaws.com/assets/curtain-PROTOTYPE2.png');  
-    background-size: 5%;  
-    background-size:contain;
-    background-repeat: no-repeat;
- }
- main {
-    text-align: center;
-    color:antiquewhite;
- }
+#home {
+   width: 100%;
+   height: 100%;
+}
+#innerhome {
+   width: 100%;
+   height: 100%;
+   color: rgb(133, 98, 53);
+   background-image: url("https://protwo.s3.us-east-2.amazonaws.com/assets/curtain-PROTOTYPE2.png");
+   background-size: cover;
+   background-position: center;
+   display: grid;
+   grid-template-columns: 1fr, 1fr;
+   grid-template-rows: 100%;
+   /* min-height: 800px; */
+}
+/* #home-left {
+   display: flex;
+   color: antiquewhite;
+   justify-content: center;
+   align-items: center;
+}
+/* #home-right {
+} */
+/* #home-left-welcome {
+   text-align: right;
+   padding:1em 1em 1em 3em;
+}
+#home-left-welcome h1 {
+  font-size: 5em;
+}
+p{
+   font-size: 3em;;
+} */
+ 

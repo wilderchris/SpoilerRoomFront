@@ -1,5 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
+import { RegisterComponent } from '../register/register.component';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +12,7 @@ export class LoginComponent implements OnInit {
   @Output() login: EventEmitter<any> = new EventEmitter();
   usernameInput!:string;
   passwordInput!:string;
-
+  register!: RegisterComponent;
   constructor(private userServ:UserService) { }
 
 
@@ -27,4 +29,5 @@ export class LoginComponent implements OnInit {
   onSubmit(): void{
     
   }
+  
 }
