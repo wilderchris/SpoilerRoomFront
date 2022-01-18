@@ -15,16 +15,16 @@
 
 </div>
 <div id="loginsplash">
-<form id="login" (ngSubmit)="onSubmit()">
+<form id="login">
 <hr>
 <mat-form-field>
     <mat-label for="username">Username: </mat-label>
-    <input matInput placeholder="username" >
+    <input matInput type="text" id="username" [(ngModel)]="usernameInput" name="username">
        
 </mat-form-field>
 <mat-form-field>
-    <mat-label for="passwrd">Password: </mat-label>
-    <input matInput type="password" placeholder="password">
+    <mat-label for="passwd">Password: </mat-label>
+    <input matInput type="password" id="passwd" [(ngModel)]="passwordInput" name="passwd">
 </mat-form-field>
 <button type="button" id="loginBtn" (click)="logIn()">Submit</button>
 <a routerLink="/register" routerLinkActive="active" >

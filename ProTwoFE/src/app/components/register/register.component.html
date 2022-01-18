@@ -4,28 +4,27 @@
 <h1>Register for your account!</h1>
 
 
-<form *ngIf="regForm" [formGroup]="regForm" (ngSubmit)="onSubmit()">
+<form *ngIf="regForm" [formGroup]="regForm" >
 
     <!-- just there so I could check the output for it -->
 Value: {{ regForm.value | json}}
 
 <hr>
 <mat-form-field>
-    <input matInput placeholder="First Name" formControlName="firstName">
-       
+    <input matInput placeholder="First Name" formControlName="firstName" [(ngModel)]="newUser.firstName">
 </mat-form-field>
 <mat-form-field>
-    <input matInput placeholder="Last Name" formControlName="lastName">
+    <input matInput id="lastName" placeholder="Last Name" formControlName="lastName" [(ngModel)]="newUser.lastName">
 </mat-form-field>
 <mat-form-field>
-    <input matInput placeholder="Username" formControlName="username">
+    <input matInput id="username" placeholder="Username" formControlName="username"[(ngModel)]="newUser.username" >
 </mat-form-field>
 <mat-form-field>
-    <input matInput placeholder="Password" type="password" formControlName="passwrd">
+    <input matInput id="passwd" placeholder="Password" type="password" formControlName="passwd" [(ngModel)]="newUser.passwd">
     <mat-hint align="end">
             Must have one letter and one number
     </mat-hint>
-    <mat-error *ngIf="passwrd && passwrd.touched" class="has-text">
+    <mat-error *ngIf="passwd && passwd.touched" class="has-text">
 
     </mat-error>
 
@@ -33,6 +32,6 @@ Value: {{ regForm.value | json}}
 <mat-checkbox formControlName="agree" color="primary">Verify all you Data is Correct?</mat-checkbox>
 <hr>
  
- <button mat-raised-button [disabled]="regForm.invalid">Submit</button>
+ <button mat-raised-button [disabled]="regForm.invalid" (click)="register()">Submit</button>
 </form>
 </body>
