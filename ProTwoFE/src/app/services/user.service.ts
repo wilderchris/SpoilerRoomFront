@@ -15,7 +15,7 @@ export class UserService {
   async checkLogin() {
     let token = localStorage.getItem('Token');
     if (token) {
-      let resp = await fetch(this.url.url + 'users/' + token + '/auth');
+      let resp = await fetch(this.url.url + 'user/' + token + '/auth');
       if (resp.status===200) {
         this.loggedInUser = await resp.json();
       }
@@ -28,7 +28,7 @@ export class UserService {
       'password':password
     };
 
-    let resp = await fetch(this.url.url + 'users/auth', {method:'POST',body:JSON.stringify(credentials)});
+    let resp = await fetch(this.url.url + 'user/auth', {method:'POST',body:JSON.stringify(credentials)});
 
     if (resp.status===200) {
       let token = await resp.json();
@@ -42,7 +42,7 @@ export class UserService {
   }
 
   async register(person:User): Promise<void> {
-    let resp = await fetch(this.url.url + 'users', {method:'POST',body:JSON.stringify(person)});
+    let resp = await fetch(this.url.url + 'user', {method:'POST',body:JSON.stringify(person)});
     if (resp.status===200 || resp.status===201) {
       // TODO
     }
@@ -50,7 +50,7 @@ export class UserService {
 
   async updateUser(person:User): Promise<void> {
     if (person.id===this.loggedInUser.id) {
-      let resp = await fetch(this.url.url + 'users/' + person.id, {method:'PUT',body:JSON.stringify(person)});
+      let resp = await fetch(this.url.url + 'user/' + person.id, {method:'PUT',body:JSON.stringify(person)});
       if (resp.status===200) {
         this.loggedInUser = await resp.json();
       }
