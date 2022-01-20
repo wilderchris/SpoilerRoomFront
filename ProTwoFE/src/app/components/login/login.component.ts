@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
   @Output() login: EventEmitter<any> = new EventEmitter();
   usernameInput!:string;
   passwordInput!:string;
-  register!: RegisterComponent;
+  
   constructor(private userServ:UserService) { }
 
 
@@ -26,8 +26,5 @@ export class LoginComponent implements OnInit {
 
   }
 
-  onSubmit(): void{
-    
-  }
-  
+ 
 }

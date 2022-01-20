@@ -1,11 +1,11 @@
 
 export class User {
     constructor(
-        public id:number,
+        public id:number = 0,
         public firstName:string,
         public lastName:string,
         public username:string,
-        public passwrd:string,
-        public role:number = 0
+        public passwd:string,
+        public role:number = 3
     ) { }
 }

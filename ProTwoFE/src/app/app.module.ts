@@ -33,7 +33,7 @@ import { Location, PopStateEvent } from "@angular/common";
     UpdateUserComponent,
     NavbarComponent,
     LoginComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
