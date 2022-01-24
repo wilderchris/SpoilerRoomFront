@@ -81,7 +81,7 @@ getAllCommentsByUser(user:User): Observable<Comments> {// wont take a body param
   return this.http.get<Comments>(this.url + '/user/' + user.id ).pipe(map(resp => resp as Comments));
 }
 deleteComment(comment:Comments){
-  this.http.post<Comments>(this.url + comment.id+'/delete', comment);
+  this.http.delete(this.url + comment.id +'/delete', );
 }
 ///************ */
 }

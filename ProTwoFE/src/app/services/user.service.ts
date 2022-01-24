@@ -7,6 +7,8 @@ import { UrlService } from './url.service';
 })
 export class UserService {
   loggedInUser!:User;
+  authHeaders = {'Content-type':'application/json','Token':''};
+  regHeaders = {'Content-type':'application/json'};
 
 
   constructor(private url: UrlService) { }
