@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 import {  Movie } from '../models/movie';
-import { map } from 'rxjs';
+import { map, retry } from 'rxjs';
 import { Review } from '../models/review';
 import { Like } from '../models/like';
 import { Comments } from '../models/comments';
 import { User } from '../models/user';
-import { apiMovie } from '../models/apimovie';
+import { ApiMovie } from '../models/apimovie';
+import { UrlService } from './url.service';
 
 
 @Injectable({
@@ -15,15 +16,19 @@ import { apiMovie } from '../models/apimovie';
 })
 export class HttpService {
   [x: string]: any;
-url:string="http://localhost:8080/review";
+url:string="http://localhost:8080/";
+apiUrl:string = "https://api.themoviedb.org/3/search/movie?api_key=";
+apiKey:string = "66aa79850db1fa69dcd6bf4bca65021e";
+apiQuery:string = "&query=";
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, url: UrlService) { }
 
 //************************** API method with my key, but it isnt much info  */
-  getAPIMovie(idInput:string): Observable<apiMovie> {
-    return this.http.get('https://imdb-api.com/en/API/SearchMovie/k_q525tskh/' + idInput).pipe(map(resp => resp as apiMovie));
-  }
+getAPIMovie(movieName:string):Observable<ApiMovie>  {
+  return this.http.get(this.apiUrl + this.apiKey + this.apiQuery + movieName).pipe(retry(3), map(resp => resp as ApiMovie));
+
+}
 
 
   //********* Movie Controller    the query params may be an issue still looking at them */
