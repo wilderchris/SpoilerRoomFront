@@ -52,7 +52,11 @@ export class UserService {
 
   async updateUser(person:User): Promise<void> {
     if (person.id===this.loggedInUser.id) {
-      let resp = await fetch(this.url.url + 'user/' + person.id, {method:'PUT',body:JSON.stringify(person)});
+     // this.authHeaders.Token = localStorage.getItem('Token');
+
+      let resp = await fetch(this.url.url + 'user/' + person.id, {method:'PUT',body:JSON.stringify(person),
+        headers:this.authHeaders});
+
       if (resp.status===200) {
         this.loggedInUser = await resp.json();
       }
