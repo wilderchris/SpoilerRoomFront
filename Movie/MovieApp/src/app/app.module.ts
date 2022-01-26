@@ -48,4 +48,4 @@ import { HttpService } from './services/http.service';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { } 

@@ -3,57 +3,30 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 
-
-
-
-
 <div class="moviecard">
-    <mat-card class="movie-card">
-      <mat-card-header>
-        <div class="leftd" mat-card-avatar ><img [src]="movie.image"></div>
-        <div class='rightd'> 
-              <mat-card-title>{{ movie2.movieName }}</mat-card-title><br>
-                <mat-card-subtitle><br>
-            <mat-label>Year: {{ movie2.year }}</mat-label><br>
-            <mat-label>Genre: {{ movie2.genre }}</mat-label><br>
-            <mat-label>Rating: {{ movie2.movieRating }}</mat-label>
-
-          </mat-card-subtitle></div>
-      </mat-card-header><div class='rightdd'>
+  <mat-card class="movie-card">
+    <mat-card-header>
+      <div mat-card-avatar><img [src]="movie.image">
+      </div>
+      <div>
+        <mat-card-title>{{ movie2.movieName }}</mat-card-title>
+        <mat-card-subtitle><br>
+          <mat-label>Year: {{ movie2.year }}</mat-label><br>
+          <mat-label>Genre: {{ movie2.genre }}</mat-label><br>
+          <mat-label>Rating: {{ movie2.movieRating }}</mat-label>
+        </mat-card-subtitle>
+      </div>
+    </mat-card-header>
+    <div class='rightdd'>
       <mat-card-content>Summary
         <p>
           <textarea id="movieDesc" [(ngModel)]='movie2.description'></textarea>
-         <br>
-         
-          <!-- <form [formGroup]="form">
-            <ngx-star-rating formControlName="ratingReview" [(ngModel)]='review.ratingReview' ></ngx-star-rating>
-            <div>Rating: {{review.ratingReview}}</div>
-             <p> {{ form.valid ? 'true' : 'false' }}</p>
-          </form> -->
-   
-          <!-- <ul >
-            <li *ngFor="let movie of movie2">
-              <a routerLink="/detail/{{movie.movieName}}">
-               
-                <span class="badge">{{movie1.description}</span> {{movie.movieRating}}
-              </a>
-             <button class="delete" title="delete hero"
-            (click)="delete(hero)">x</button> -->
-          <!-- </li>
-          </ul> -->
-
-
-      <!-- </mat-card-content></div> -->
-      <mat-card-actions>
-        <button mat-button type="button"  (click)="onSearch()"  >Review</button>
-
-        
-            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/pTXhmv1pjcw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-            <!-- <iframe width="100%" height="315" src="https://youtube/embed/pTXhmv1pjcw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
-   
-
-      </mat-card-actions>
-    <!-- </mat-card> -->
-    <!-- </div> -->
-
-
+          <br>
+          <mat-card-actions>
+            <button mat-button type="button" (click)="onSearch()">Review</button>
+          </mat-card-actions>
+        </p>
+      </mat-card-content>
+    </div>
+  </mat-card>
+</div>

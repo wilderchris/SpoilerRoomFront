@@ -44,7 +44,12 @@ apiQuery:string = "&query=";
   sendMovie(movie:Movie):Observable<Movie> {
     return this.http.post<Movie>(this.url, movie);
     }
-    getAllMovies(){
+    async getAllMovies(): Promise<Movie[]>{
+      let resp = await fetch(this.url + '/movie/' );
+
+    if (resp.status===200) {
+      return await resp.json();
+    }
 
     }
   // getMovieById(movieId:number): Observable<Movie> {

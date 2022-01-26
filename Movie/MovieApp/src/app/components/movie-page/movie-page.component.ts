@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Movie } from 'src/app/models/movie';
 import { HttpService } from 'src/app/services/http.service';
 import { ApiMovie } from 'src/app/models/apimovie';
@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./movie-page.component.css']
 })
 export class MoviePageComponent implements OnInit {
-  movie2: Movie;
+  @Input() movie2: Movie;
   //movie1: Movie[] =[];
   //apiMovie!:ApiMovie;
  // movies!: Movie[];
@@ -31,10 +31,10 @@ export class MoviePageComponent implements OnInit {
   constructor(private httpServ: HttpService) { }
 
   async ngOnInit() {
-   this.movie2 = await this.httpServ.getMovieById(1);
-
+  //  this.movie2 = await this.httpServ.getMovieById(1);
+  // this.movie2 = await this.httpServ.getMovieById(1);
     // this.httpServ.getMovieById(1).subscribe(resp => {this.movie2 , resp});
-    console.log(this.movie2);
+    // console.log(this.movie2);
   }
 onSearch(){
   // this.httpServ.getAPIMovie("Jack+Reacher").subscribe(resp => {this.apiMovie = resp});

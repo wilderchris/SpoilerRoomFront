@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormsModule } from '@angular/forms';
 import { Movie } from 'src/app/models/movie';
+import { HttpService } from 'src/app/services/http.service';
 
 @Component({
   selector: 'app-movieslider',
@@ -9,7 +10,7 @@ import { Movie } from 'src/app/models/movie';
 })
 export class MoviesliderComponent implements OnInit {
 
-  movies!: Movie[];
+  movies: Movie[];
   movie = {
     id: 0,
     movieName: "Happy Gilmore",
@@ -21,9 +22,12 @@ export class MoviesliderComponent implements OnInit {
     url:"https://www.youtube.com/watch?v=pTXhmv1pjcw"
   }
 
-  constructor() { }
+  constructor(private httpServ: HttpService) { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+    this.movies = await this.httpServ.getAllMovies();
+    console.log(this.movies);
   }
+
 
 }
