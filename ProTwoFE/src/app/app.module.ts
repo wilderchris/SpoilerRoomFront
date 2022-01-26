@@ -23,6 +23,8 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 import { Location, PopStateEvent } from "@angular/common";
+import { ButtonComponent } from './components/button/button.component';
+import { ExploreComponent } from './components/explore/explore.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { Location, PopStateEvent } from "@angular/common";
     RegisterComponent,
     UpdateUserComponent,
     NavbarComponent,
-    LoginComponent
+    LoginComponent,
+    ButtonComponent,
+    ExploreComponent
     ],
   imports: [
     BrowserModule,
