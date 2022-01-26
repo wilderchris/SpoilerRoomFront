@@ -44,7 +44,7 @@ export class ReviewComponent implements OnInit {
   async sendRev() {
    
     this.httpServ.sendReview(this.review).subscribe(
-      (      resp: Review) => {
+      ( resp: Review) => {
         this.review = resp;
         console.log(this.review);
     });

@@ -3,6 +3,9 @@ import { Movie } from 'src/app/models/movie';
 import { HttpService } from 'src/app/services/http.service';
 import { ApiMovie } from 'src/app/models/apimovie';
 import { Observable } from 'rxjs';
+import {MatDialog, MatDialogConfig } from "@angular/material/dialog"
+import { ReviewComponent } from '../review/review.component';
+
 
 @Component({
   selector: 'app-movie-page',
@@ -28,7 +31,7 @@ export class MoviePageComponent implements OnInit {
 
 
 
-  constructor(private httpServ: HttpService) { }
+  constructor(private httpServ: HttpService,private dialog:MatDialog) { }
 
   async ngOnInit() {
   //  this.movie2 = await this.httpServ.getMovieById(1);
@@ -36,9 +39,12 @@ export class MoviePageComponent implements OnInit {
     // this.httpServ.getMovieById(1).subscribe(resp => {this.movie2 , resp});
     // console.log(this.movie2);
   }
-onSearch(){
-  // this.httpServ.getAPIMovie("Jack+Reacher").subscribe(resp => {this.apiMovie = resp});
-  //   console.log(this.apiMovie);
-// this.movie = this.httpServ.getAPIMovie(this.movie.movieName);
+onClick(){
+  const dialogRef = this.dialog.open(ReviewComponent);
+  dialogRef.afterClosed().subscribe(result => {
+    console.log(`Dialog result: ${result}`);
+
+    
+  });
 }
 }

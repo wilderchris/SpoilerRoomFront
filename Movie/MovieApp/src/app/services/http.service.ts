@@ -74,7 +74,7 @@ getReviewsByMovie(movieId:number): Observable<Review>{
 
 //************* Reviews Controller */
   sendReview(review:Review): Observable<Review> {
-    return this.http.post<Review>(this.url, review);
+    return this.http.post<Review>(this.url+ "/review/", review);
   }
 
   likeReview(like:Like): void{
