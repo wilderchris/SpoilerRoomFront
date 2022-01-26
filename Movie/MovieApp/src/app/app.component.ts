@@ -38,14 +38,14 @@ constructor(private http: HttpService,private fb: FormBuilder){
 
   }
 
-  async getMovie() {
+  //async getMovie() {
    
   //  this.http.getMovieByName(this.movieName).subscribe(
      // (      resp: Movie) => {
         //this.movie = resp;
       //  console.log(this.movies);
   //  });
-  }
+  
   
 
 

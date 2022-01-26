@@ -5,6 +5,6 @@ export class Movie {
      description:string;
      movieRating:string;
      genre:string;
-     image:any;
+     image:string;
      url:any;
 }

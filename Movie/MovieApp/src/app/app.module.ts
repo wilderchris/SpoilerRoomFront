@@ -9,11 +9,10 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { NgxStarRatingModule } from 'ngx-star-rating';
 import {MatGridListModule} from '@angular/material/grid-list';
 
-
+import { MatInputModule } from '@angular/material/input';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {  ReactiveFormsModule } from '@angular/forms';
 import { ReviewComponent } from './components/review/review.component';
 import { MoviesliderComponent } from './components/movieslider/movieslider.component';
 import {MatTabsModule} from '@angular/material/tabs';
@@ -21,13 +20,17 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MoviePageComponent } from './components/movie-page/movie-page.component';
 import { HttpService } from './services/http.service';
 import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReviewComponent,
     MoviesliderComponent,
-    MoviePageComponent
+    MoviePageComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
