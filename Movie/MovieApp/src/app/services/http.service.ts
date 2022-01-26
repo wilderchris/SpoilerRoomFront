@@ -76,6 +76,14 @@ getReviewsByMovie(movieId:number): Observable<Review>{
   sendReview(review:Review): Observable<Review> {
     return this.http.post<Review>(this.url+ "/review/", review);
   }
+  async sendRev(review: Review): Promise<boolean>{
+   // this.authHeaders.Token = localStorage.getItem('Token');
+    let resp = await fetch(this.url + '/review/', {method:'POST', body:JSON.stringify(review)} );
+     // headers:this.authHeaders});
+    if (resp.status===201) return true;
+    else return false;
+
+  }
 
   likeReview(like:Like): void{
 //no return or exception catchs
