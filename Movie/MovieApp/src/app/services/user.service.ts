@@ -10,16 +10,17 @@ export class UserService {
   authHeaders = {'Content-type':'application/json','Token':''};
   regHeaders = {'Content-type':'application/json'};
 
-
   constructor(private http: HttpService) { }
 
 
   async checkLogin() {
+
     let token = localStorage.getItem('Token');
     if (token) {
       let resp = await fetch(this.http.url + '/user/' + token + '/auth');
       if (resp.status===200) {
         this.loggedInUser = await resp.json();
+        console.log(token);
       }
     }
   }
@@ -33,10 +34,10 @@ export class UserService {
     let resp = await fetch(this.http.url + '/user/auth', {method:'POST',body:JSON.stringify(credentials),
     headers:this.regHeaders});
 
-
     if (resp.status===200) {
       let token = await resp.json();
       localStorage.setItem('Token', token);
+      console.log(resp);
     }
   }
 

@@ -1,48 +1,42 @@
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="reviewcard">
   <button mat-button mat-dialog-close>x</button>
-  <h2 mat-dialog-title>Hello, Welcome to Review</h2>
- 
+  <h2 ></h2>
 
-<div mat-dialog-content class="mat-typography">
-<mat-card class="review-card">
-  <mat-card-header>
-    <h1></h1><br>
-    <mat-card-title></mat-card-title>
-   
-      <mat-card-subtitle>Review Title<br>
-        <input matInput id="revtitle" type="text" [(ngModel)]='review.reviewTitle'><br>
-      </mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content>Review Text
-    <p>
-      <textarea matInput id="revtext" [(ngModel)]='review.reviewText'></textarea>
-     <br>
-     
-      <form [formGroup]="form">
-        <ngx-star-rating formControlName="ratingReview" [(ngModel)]='review.ratingReview' ></ngx-star-rating>
-        <div>Rating: {{review.ratingReview}}</div>
-        <!-- <p> {{ form.valid ? 'true' : 'false' }}</p> -->
-      </form>
-  </mat-card-content>
-  <mat-card-actions>
+  <div class="mat-typography">
+    <mat-card class="review-card">
+      <mat-card-header>
+        <h1></h1><br>
+        <mat-card-title></mat-card-title>
+
+        <mat-card-subtitle>Review Title<br>
+          <input name="fieldName" ngDefaultControl matInput id="revtitle" type="text"
+            [(ngModel)]='review.reviewTitle'><br>
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>Review Text
+        <p>
+          <textarea name="fieldName" ngDefaultControl matInput id="revtext" [(ngModel)]='review.reviewText'></textarea>
+          <br>
+
+        <form [formGroup]="form">
+          <ngx-star-rating name="fieldName" ngDefaultControl formControlName="ratingReview"
+            [(ngModel)]='review.ratingReview'></ngx-star-rating>
+          <div>Rating: {{review?.ratingReview}}</div>
+        </form>
+      </mat-card-content>
+      <mat-card-actions>
         <button mat-button type="button" (click)="sendRev()"  mat-dialog-close>Submit Review</button>
-  </mat-card-actions>
-</mat-card>
+      </mat-card-actions>
+    </mat-card>
 
+  </div>
 </div>
-</div>
-
-
-
-
-
-
+<!-- 
 <mat-label class="sample" type="text"> {{review.reviewTitle}}</mat-label><br>
-<mat-label  class="sample" type="text" >{{review.reviewText}}</mat-label><br>
-<mat-label  class="sample" type="text" >{{form.value.ratingReview}}</mat-label><br>
-<mat-label  class="sample" type="text" >{{review.movieid}}</mat-label><br>
+<mat-label class="sample" type="text">{{review.reviewText}}</mat-label><br>
+<mat-label class="sample" type="text">{{form.value.ratingReview}}</mat-label><br>
+<mat-label class="sample" type="text">{{review.movie}}</mat-label><br> -->
 
 
-<router-outlet></router-outlet>
+

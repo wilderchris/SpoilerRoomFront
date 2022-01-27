@@ -1,9 +1,9 @@
 export class Review {
-    id:number =0;
-    reviewTitle:string ="";
-    reviewText:string="";
-    ratingReview:number=2;
-    sentAt:string="";
-    user:number=2;
-    movieid:number=1;
+    id:number;
+    reviewTitle:string;
+    reviewText:string;
+    ratingReview:number;
+    sentAt:string;
+    user:number;
+    movie:number;
 }

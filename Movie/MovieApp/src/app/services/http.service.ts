@@ -19,6 +19,7 @@ url:string="http://localhost:8080";
 apiUrl:string = "https://api.themoviedb.org/3/search/movie?api_key=";
 apiKey:string = "66aa79850db1fa69dcd6bf4bca65021e";
 apiQuery:string = "&query=";
+public movieid:number;
 
 
 

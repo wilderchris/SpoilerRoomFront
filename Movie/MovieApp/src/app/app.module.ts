@@ -8,6 +8,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { NgxStarRatingModule } from 'ngx-star-rating';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 
 import { MatInputModule } from '@angular/material/input';
 import { AppComponent } from './app.component';
@@ -19,9 +20,10 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MoviePageComponent } from './components/movie-page/movie-page.component';
 import { HttpService } from './services/http.service';
-import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { FooterNavComponent } from './components/footer-nav/footer-nav.component';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { LoginComponent } from './components/login/login.component';
     MoviesliderComponent,
     MoviePageComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    FooterNavComponent
   ],
   imports: [
     BrowserModule,
@@ -47,11 +50,14 @@ import { LoginComponent } from './components/login/login.component';
     MatTabsModule,
     MatCheckboxModule,
     MatGridListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatInputModule
   ],
   providers: [
-    HttpService, {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}} ],
-  bootstrap: [AppComponent],
-  entryComponents:[ReviewComponent]
+    UserService,
+    HttpService,
+     {provide: MAT_DIALOG_DEFAULT_OPTIONS,
+       useValue: {hasBackdrop: false}} ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { } 
