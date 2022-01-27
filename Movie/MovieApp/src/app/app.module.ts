@@ -24,6 +24,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { FooterNavComponent } from './components/footer-nav/footer-nav.component';
 import { UserService } from './services/user.service';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { UserService } from './services/user.service';
     MoviePageComponent,
     HomeComponent,
     LoginComponent,
-    FooterNavComponent
+    FooterNavComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
