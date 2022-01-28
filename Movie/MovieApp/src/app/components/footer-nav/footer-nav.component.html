@@ -8,7 +8,7 @@
         <a routerLink="home">SpoilerScreen</a>
       
         <a routerLink="movie">Movies!</a>
-        <a *ngIf="loggedInUser" routerLink="home">My Reviews</a>
+        <!-- <a *ngIf="loggedInUser" routerLink="home">My Reviews</a> -->
         <a *ngIf="loggedInUser && loggedInUser.rank.rankTitle == 'Admin' " routerLink="profile">User Admin</a>
     </span>
     <span>
