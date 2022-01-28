@@ -10,7 +10,7 @@
         <mat-card-title></mat-card-title>
 
         <mat-card-subtitle>Review Title<br>
-          <input name="fieldName" ngDefaultControl matInput id="revtitle" type="text"
+          <input id="revtitle" name="fieldName" ngDefaultControl matInput type="text"
             [(ngModel)]='review.reviewTitle'><br>
         </mat-card-subtitle>
       </mat-card-header>
@@ -20,13 +20,13 @@
           <br>
 
         <form [formGroup]="form">
-          <ngx-star-rating name="fieldName" ngDefaultControl formControlName="ratingReview"
+          <ngx-star-rating id="revrate" name="fieldName" ngDefaultControl formControlName="ratingReview"
             [(ngModel)]='review.ratingReview'></ngx-star-rating>
           <div>Rating: {{review?.ratingReview}}</div>
         </form>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-button type="button" (click)="sendRev()"  mat-dialog-close>Submit Review</button>
+        <button mat-button id="revsubbtn" type="button" (click)="sendRev()"  mat-dialog-close>Submit Review</button>
       </mat-card-actions>
     </mat-card>
 

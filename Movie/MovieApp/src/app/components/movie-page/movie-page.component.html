@@ -22,7 +22,7 @@
           <textarea readonly name="fieldName" ngDefaultControl id="movieDesc" [(ngModel)]='movie2.description'></textarea>
           <br>
           <mat-card-actions>
-            <button mat-button type="button"  (click)="onCreateClick(movie2.id)" [id]="movie2.id" >Review</button>
+            <button id="{{movie2.id}}" mat-button type="button"  (click)="onCreateClick(movie2.id)"  >Review {{ movie2.movieName}}</button>
           </mat-card-actions>
         </p>
       </mat-card-content>
