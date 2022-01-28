@@ -1,0 +1,12 @@
+div {
+  background-color: rgb(19, 23, 80);
+  border-radius: 8px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 1%;
+  margin-right: 1%;
+  display:grid;
+  grid:auto-flow / repeat(auto-fit,minmax(30%,1fr));
+  align-items: baseline;
+  gap:.5em;
+}
