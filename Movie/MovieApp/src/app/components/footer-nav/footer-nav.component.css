@@ -44,7 +44,10 @@ header{
     margin-bottom: 2%;
     margin-left: 15%;
     margin-right: 15%;
-    background-image: url('../../../assets/Lights.png');
+
+    /*background-image: url('../../../assets/Lights.png');*/
+    background-image: url('../../../assets/Lights3.png');
+
     background-repeat: no-repeat;
     background-size: 100% 100%;
     text-align: center;
@@ -247,4 +250,34 @@ header{
     background-color: rgb(23, 24, 24);
     text-align: center;
     border-radius: 4px;
+ }
+
+ .SpoilerScreen{
+   display: inline-flex;
+   text-align: left;
+   padding-right: 5%;
+   margin-top: 1%;
+   margin-bottom: 0%;
+   margin-left: 1%;
+   margin-right: 1%;
+ }
+
+ .TheMovies{
+   display:inline-flex;
+   padding-right: 5%;
+   padding-left: 5%;
+   margin-left: 1%;
+   margin-right: 5%;
+ }
+
+ .TheLogin{
+    display: inline-flex;
+    text-align: right;
+    padding-left: 10%;
+    padding-right: 5%;
+    padding-top:1%;
+    margin-top: 1%;
+    margin-left: 10%;
+   margin-right: 1%;
+
  }

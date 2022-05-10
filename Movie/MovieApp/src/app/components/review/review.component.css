@@ -1,10 +1,16 @@
 .review-card {
+    background-color:rgb(141, 3, 3);
+
     text-align: center;
     justify-content: center;
     align-items: center;
     max-width: 400px;
   }
   #revtitle{
+    text-align: center;
+    background-color: white;
+    border-radius: 4px;
+
     width: 250px;
     height: 40px;
   }

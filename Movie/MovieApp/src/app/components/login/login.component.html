@@ -1,27 +1,29 @@
 
 
 <div>
-    <h1>Login to your Account</h1>
+    <div class= 'LoginBanner'><h1>Login to your Account</h1></div>
+
     
     </div>
     <div id="loginsplash">
     <form id="login">
     <hr>
-    <mat-form-field>
+    <span><mat-form-field>
+
         <mat-label for="username">Username: </mat-label>
         <input matInput type="text" id="username" [(ngModel)]="usernameInput" name="username">
            
     </mat-form-field>
+    &nbsp;
     <mat-form-field>
         <mat-label for="passwd">Password: </mat-label>
         <input matInput type="password" id="passwd" [(ngModel)]="passwordInput" name="passwd">
-    </mat-form-field>
-    <button type="button" id="loginBtn" (click)="logIn()">Submit</button>
-    <a routerLink="/register" routerLinkActive="active" >
+    </mat-form-field></span>
+    <span><button type="button" id="loginBtn" (click)="logIn()">Submit</button>
+        &nbsp;
+    <button type="button"><a routerLink="/register" routerLinkActive="active" >
        Register
-      </a>
+      </a></button></span>
     </form>
-    </div>
-    
-    <!--Below is Andre's code-->
-    <!-- <button color='red' text='Login'></button> -->
+</div>
+

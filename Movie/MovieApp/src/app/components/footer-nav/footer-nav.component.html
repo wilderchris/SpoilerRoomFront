@@ -4,19 +4,28 @@
     <title>
         Welcome to SpoilerRoom -  Home
     </title>
+
+    <br>
+    <br>
+    <br>
     <span>
-        <a routerLink="home">SpoilerScreen</a>
-      
-        <a routerLink="movie">Movies!</a>
-        <!-- <a *ngIf="loggedInUser" routerLink="home">My Reviews</a> -->
+        <div class='SpoilerScreen'><a routerLink="home">SpoilerScreen</a></div>
+
+        <div class='TheMovies'><a routerLink="movie">Movies!</a></div>
+        &nbsp;
+        <a *ngIf="loggedInUser" routerLink="home">My Reviews</a>
+        &nbsp;
         <a *ngIf="loggedInUser && loggedInUser.rank.rankTitle == 'Admin' " routerLink="profile">User Admin</a>
     </span>
     <span>
-        <button id="sL" *ngIf="!loggedInUser; else user" (click)="showLogin=!showLogin">Log In</button>
+        <div class='TheLogin'>
+        <button *ngIf="!loggedInUser; else user" (click)="showLogin=!showLogin">Log In</button>
         <ng-template #user>
             {{ loggedInUser.firstName }}&nbsp;&nbsp;&nbsp;
-            <button id="lo" (click)="logOut()">Log Out</button>
+            <button (click)="logOut()">Log Out</button>
         </ng-template>
+    </div>
+
     </span>
 <ng-container *ngIf="showLogin">
     <app-login (login)="setup()"></app-login>

@@ -64,9 +64,13 @@ id:number;
     await this.httpServ.sendReview(this.review).subscribe(
       (resp: Review) => {
         this.review = resp;
-       // console.log(this.review);
+        console.log(this.review);
       });
+
+
+     
       alert("Review Submitted!");
+
 
   }
 }

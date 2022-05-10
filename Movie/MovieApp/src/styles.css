@@ -4,7 +4,8 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
 
 /* Andre's Code */
-/* header{
+ header{
+
     margin-left: 1.5%;
     margin-right: 1.5%;
     background-color:rgb(23, 24, 24);
@@ -19,21 +20,31 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
     padding-left: 10%;
     border-radius: 35px;
  }
+
+ /*This is where to affect home in localhost */
  
  body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #000000;
+   background-image:url('assets/Curtain.png');
+   background-size: 100% 120%;
+   background-repeat: no-repeat;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   background-color: rgb(25,25,25);
+   margin-top: 5%;
+   margin-bottom: 2%;
+   
  }
-  */
+  
  
  /* Edit the border for a possible border around the curtains */
- /* .main{
+  .main{
+
     margin-top: 0%;
     margin-bottom: 2%;
     margin-left: 3%;
     margin-right: 3%;
     /*border: 1px solid #ddd;
-    border-radius: 4px; 
+    border-radius: 4px;*/
+
     border-radius: 4px;
     background-image:url('/app/assets/Curtain.png');
     background-size: 100% 100%;
@@ -49,7 +60,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
     margin-bottom: 2%;
     margin-left: 15%;
     margin-right: 15%;
-    background-image: url('/app/assets/Lights.png');
+    /*background-image: url('/app/assets/Lights.png');*/
+
     background-repeat: no-repeat;
     background-size: 100% 100%;
     text-align: center;
@@ -74,12 +86,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
  } */
  
  /*use this top nav when you need the nav bar on top */
- /* .topnav{
+  .topnav{
+
     margin-top: 0%;
     margin-bottom: 0%;
     margin-left: 1%;
     margin-right: 1%;
-    background-image: url('/app/assets/Lights.png');
+    /*background-image: url('/app/assets/Lights.png');*/
+
     background-size: 100% 100%;
     text-align: center;
     padding-top: 3%;
@@ -96,21 +110,26 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
     background-position: center;
     text-align: center;
     padding: 1.4%;
- } */
+ } 
  
  /* this is for the round red buttons that the nav bar will have when I add it*/
- /* button{
+  button{
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background-color: rgb(245, 0, 0);
     font-size: 40px;
-    height: 100px;
-    width: 150px;
+    height: 175px;
+    width: 250px;
+
     border-radius: 90%;
     border: 4px solid #383636;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.411), 0 17px 50px 0 rgba(0, 0, 0, 0.37);
  }
  
  .button:hover {background-color: #b81111}
+
+ /*replacement button for custom films*/
+ 
+
  
  .profiletop1{
     margin-top: 1%;
@@ -149,10 +168,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
   background-image:none;
   border-radius: 50%;
   display: inline-block;
- } */
+ } 
  
  /*this is for the badges */
- /* .dot2{
+  .dot2{
+
     height: 50px;
     width: 50px;
     background-color: rgb(219, 10, 10);
@@ -162,17 +182,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
   } */
  
  /* make this invisible */
- /* .profilebackground{
+  .profilebackground{
+
     background-color: #1a1919;
     padding-top: 0.5%;
     padding-bottom: 1%;
     display: flex;
     flex-direction: row;
     border: solid 1px #1a1919;
- } */
+ } 
  
  /*These profile codes will need tweaking to fit properly in the page */
- /* .profileleft{
+  .profileleft{
+
     margin-top: 1%;
     margin-bottom: 2%;
     margin-left: 1%;
@@ -252,4 +274,4 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
     background-color: rgb(23, 24, 24);
     text-align: center;
     border-radius: 4px;
- } */
+ }
