@@ -16,12 +16,14 @@ img {
 }
 
 /* img {
+
     
     background-size:cover;
 height:100px;
 }
 .movie-card {
   background-color: rgb(141, 3, 3);
+
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -65,6 +67,7 @@ height:100px;
   /* #movieDesc{
     width: 75%;
     height: 150px;
+
     padding: 12px 20px;
     overflow-wrap: break-word;
     box-sizing: border-box;
@@ -73,6 +76,7 @@ height:100px;
     border-radius: 4px;
     background-color: #f8f8f8;
   } */
+
   /* .leftd{
       grid-column: auto;
       justify-self: left;
@@ -137,3 +141,4 @@ width: 400uv;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.411), 0 17px 50px 0 rgba(0, 0, 0, 0.37);
     /* transform: translateZ(100px); ????*/
   }
+

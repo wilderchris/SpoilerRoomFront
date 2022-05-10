@@ -27,6 +27,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { ExploreComponent } from './components/explore/explore.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { ExploreComponent } from './components/explore/explore.component';
     LoginComponent,
     ButtonComponent,
     ExploreComponent
+
     ],
   imports: [
     BrowserModule,

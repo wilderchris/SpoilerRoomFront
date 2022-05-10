@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="reviewcard">
   <button mat-button mat-dialog-close style="background-color: rgb(86, 86, 88); height:50px; width:50px;text-align: center;">X</button>
+
   <h2 ></h2>
 
   <div class="mat-typography">
@@ -15,6 +16,7 @@
         </mat-card-subtitle>
       </mat-card-header>
       <mat-card-content><u>Review Text</u>
+
         <p>
           <textarea name="fieldName" ngDefaultControl matInput id="revtext" [(ngModel)]='review.reviewText'></textarea>
           <br>
@@ -27,6 +29,7 @@
       </mat-card-content>
       <mat-card-actions>
         <button mat-button type="button" (click)="sendRev()"  mat-dialog-close>Submit Review</button>
+
       </mat-card-actions>
     </mat-card>
 
